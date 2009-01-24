@@ -8,8 +8,28 @@ You really must read the Pragmatic Automation article [http://www.pragmaticautom
 You will need also the [http://www.pragmaticautomation.com/code/pragautox10-1_0.zip Pragmatic Automation X10 software] referenced in the article. Note that it's distributed under a [PragmaticAutomationX10License restricted license].
 Download and extract the zip file and copy its {{{src}}} folder into {{{src/main/java}}}
 
-Then run Maven
+
+= Building =
+
+Run Maven
 
 {{{mvn clean package}}}
 
-and you will get the app to run
+to build the application.
+
+
+= Running =
+
+1) Copy {{{javax.comm:comm}}} and {{{org.rxtx:rxtxcomm}}} jars from the Maven repo to
+
+{{{JRE_PATH\lib\ext}}} or {{{JDK_PATH\jre\lib\ext}}}
+
+
+2) Copy {{{src/main/resources/javax.comm.properties}}} to
+
+{{{JRE_PATH\lib}}} or {{{JDK_PATH\jre\lib}}}
+
+
+3) Get {{{rxtxSerial.dll}}} (or equivalent for Linux or OSX) from [http://rxtx.qbang.org/wiki/index.php/Download RXTX]. Tested with rxtx-2.0-7pre1-i386-pc-mingw32. Copy it to
+
+{{{JRE_PATH\bin}}} or {{{JDK_PATH\jre\bin}}}
