@@ -34,7 +34,7 @@ to build the application.
 
 {{{JRE_PATH\bin}}} or {{{JDK_PATH\jre\bin}}}
 
-== Continuum ==
+= Running with Continuum =
 
 {{{
 java eu.carlossanchez.continuouslava.continuum.ContinuumMonitor Continuum_URL [COMPort] [SuccessDevice] [FailureDevice] [startingAtHour] [endingAtHour]
@@ -47,4 +47,14 @@ java eu.carlossanchez.continuouslava.continuum.ContinuumMonitor Continuum_URL [C
 }}}
 
 
-== CruiseControl ==
+= Running with CruiseControl =
+
+{{{
+java eu.carlossanchez.continuouslava.cruisecontrol.CruiseControlMonitor CCTray_feed_url [COMPort] [SuccessDevice] [FailureDevice] [startingAtHour] [endingAtHour]" );
+  CCTray_feed_url : url of the CCTray feed, usually http://cruisecontrol_machine/dashboard/cctray.xml
+  COMPort: COM1 by default
+  SuccessDevice: X10 Code of device to turn on on success, by default A1
+  FailureDevice: X10 Code of device to turn on on failure, by default A2
+  startingAtHour: hour to start turning on the lamps, by default 8
+  endingAtHour: hour to turn off both the lamps, by default 20
+}}}
