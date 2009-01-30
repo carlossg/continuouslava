@@ -18,7 +18,7 @@ Run Maven
 to build the application.
 
 
-= Running =
+= Setup =
 
 1) Copy {{{javax.comm:comm}}} and {{{org.rxtx:rxtxcomm}}} jars from the Maven repo to
 
@@ -33,3 +33,18 @@ to build the application.
 3) Get {{{rxtxSerial.dll}}} (or equivalent for Linux or OSX) from [http://rxtx.qbang.org/wiki/index.php/Download RXTX]. Tested with rxtx-2.0-7pre1-i386-pc-mingw32. Copy it to
 
 {{{JRE_PATH\bin}}} or {{{JDK_PATH\jre\bin}}}
+
+== Continuum ==
+
+{{{
+java eu.carlossanchez.continuouslava.continuum.ContinuumMonitor Continuum_URL [COMPort] [SuccessDevice] [FailureDevice] [startingAtHour] [endingAtHour]
+  Continuum_URL : url of the Continuum server, usually http://host:port/continuum/xmlrpc
+  COMPort: COM1 by default
+  SuccessDevice: X10 Code of device to turn on on success, by default A1
+  FailureDevice: X10 Code of device to turn on on failure, by default A2
+  startingAtHour: hour to start turning on the lamps, by default 8
+  endingAtHour: hour to turn off both the lamps, by default 20
+}}}
+
+
+== CruiseControl ==
