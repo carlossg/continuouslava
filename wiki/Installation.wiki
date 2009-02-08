@@ -6,7 +6,7 @@
 You really must read the Pragmatic Automation article [http://www.pragmaticautomation.com/cgi-bin/pragauto.cgi/Monitor/Devices/BubbleBubbleBuildsInTrouble.rdoc Bubble, Bubble, Build's In Trouble]
 
 You will need also the [http://www.pragmaticautomation.com/code/pragautox10-1_0.zip Pragmatic Automation X10 software] referenced in the article. Note that it's distributed under a [PragmaticAutomationX10License restricted license].
-Download and extract the zip file and copy its {{{src}}} folder into {{{src/main/java}}}
+Download and extract the zip file and copy its {{{src}}} folder into {{{src/main/java}}} and delete {{{com/pragauto/X10Publisher.java}}}
 
 
 = Building =
